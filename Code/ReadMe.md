@@ -1,7 +1,7 @@
 
 # Road Traffic Recognition Using Convolution Neural Networks CNN | OPENCV Python 
 
-Name : Syed Muhammad Abdullah Ahsab and Moin Abbas Qureshi
+Name : Syed Muhammad Abdullah Ahsan and Moin Abbas Qureshi
 
 Train and classify Traffic situations using Convolutional neural networks This will be done using 
  OPENCV in real time using a simple webcam.CNNs have been gaining popularity in the past couple of years due to their ability to generalize and classify the data with high accuracies.
