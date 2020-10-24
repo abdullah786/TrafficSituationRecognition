@@ -1,0 +1,29 @@
+def myModel():
+    print(device_lib.list_local_devices())
+    print("GPU is", "available" if tf.config.experimental.list_physical_devices("GPU") else "NOT AVAILABLE")
+
+    no_Of_Filters = 64
+    size_of_Filter = (5, 5) # THIS IS THE KERNEL THAT MOVE AROUND THE IMAGE TO GET THE FEATURES.
+    size_of_Filter2 = (3, 3)  # THIS WOULD REMOVE 2 PIXELS FROM EACH BORDER WHEN USING 32 32 IMAGE
+    size_of_pool = (2, 2)  # SCALE DOWN ALL FEATURE MAP TO GERNALIZE MORE, TO REDUCE OVERFITTING
+    no_Of_Nodes = 500  # NO. OF NODES IN HIDDEN LAYERS
+    model = Sequential()
+
+    model.add((Conv2D(no_Of_Filters, size_of_Filter, input_shape=(imageDimesions[0], imageDimesions[1], 1),activation='relu')))  # ADDING MORE CONVOLUTION LAYERS = LESS FEATURES BUT CAN CAUSE ACCURACY TO INCREASE
+    model.add((Conv2D(no_Of_Filters, size_of_Filter, activation='relu')))
+    model.add(MaxPooling2D(pool_size=size_of_pool))  # DOES NOT EFFECT THE DEPTH/NO OF FILTERS
+
+
+    model.add((Conv2D(no_Of_Filters // 2, size_of_Filter2, activation='relu')))
+    model.add((Conv2D(no_Of_Filters // 2, size_of_Filter2, activation='relu')))
+    model.add(MaxPooling2D(pool_size=size_of_pool))
+    model.add(Dropout(0.5))
+
+    model.add(Flatten())
+    model.add(Dense(no_Of_Nodes, activation='relu'))
+    model.add(Dropout(0.5))  # INPUTS NODES TO DROP WITH EACH UPDATE 1 ALL 0 NONE
+    model.add(Dense(noOfClasses, activation='softmax'))  # OUTPUT LAYER
+
+   # COMPILE MODEL
+    model.compile(Adam(lr=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
+    return model

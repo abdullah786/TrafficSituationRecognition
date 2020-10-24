@@ -1,0 +1,6 @@
+[[ 91  62  11]
+ [  0 155   0]
+ [  1   1 235]]
+Normalized confusion matrix
+
+cm610
