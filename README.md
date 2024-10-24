@@ -1,21 +1,32 @@
+# Road Traffic Recognition Using Convolutional Neural Networks (CNN) | OpenCV Python
 
-# Road Traffic Recognition Using Convolution Neural Networks CNN | OPENCV Python 
+## Team Members
+Syed Muhammad Abdullah Ahsan & Moin Abbas Qureshi
 
-Name : Syed Muhammad Abdullah Ahsan and Moin Abbas Qureshi
+## Project Overview
+In an era where traffic congestion and safety are paramount, our project aims to enhance road traffic management through advanced image recognition technology. We developed a real-time traffic situation classification system utilizing Convolutional Neural Networks (CNN) in conjunction with OpenCV and Python.
 
-Train and classify Traffic situations using Convolutional neural networks This will be done using 
- OPENCV in real time using a simple webcam.CNNs have been gaining popularity in the past couple of years due to their ability to generalize and classify the data with high accuracies.
-  In this project we trained traffic situations with over 3000 images of 3 different classes ['No Traffic', 'Medium Traffic', 'Heavy Traffic'] with the help of tensorflow and keras . 
- 
- 
- Libraries and their versions:
- python 3.6
- keras  2.3.1
- opencv-python lastest
- sklearn 0.0
- tensorflow 2.0.0
- scikit-learn 0.22.1
- pickle any
- imutils
- pathlib
- PySimpleGUI
+## Key Features
+- **Traffic Classification:** The system categorizes traffic conditions into three distinct classes: **'No Traffic,' 'Medium Traffic,' and 'Heavy Traffic.'**
+- **Real-Time Monitoring:** Operates in real time using a simple webcam setup.
+- **High Accuracy:** Trained with over 3,000 labeled images to achieve robust classification performance.
+
+## Technical Stack
+- **Programming Language:** Python 3.6
+- **Libraries:**
+  - **Keras:** 2.3.1
+  - **OpenCV:** Latest version
+  - **TensorFlow:** 2.0.0
+  - **Scikit-Learn:** 0.22.1
+  - **Other Libraries:** pickle, imutils, pathlib, PySimpleGUI
+
+## Dataset
+The model was trained on a dataset comprising over 3,000 images across three classes of traffic conditions.
+
+## Objectives
+1. **Real-Time Traffic Monitoring:** Utilize a webcam to monitor and classify traffic conditions instantaneously.
+2. **High Accuracy Classification:** Implement CNNs to generalize and classify traffic scenarios effectively.
+3. **User-Friendly Interface:** Create a simple GUI for easy interaction and visualization of traffic conditions.
+
+## Conclusion
+This project demonstrates the capabilities of machine learning in traffic management and paves the way for future enhancements in smart city infrastructure. By providing a reliable method for traffic classification, we aim to contribute to more efficient urban mobility solutions.
